@@ -1,0 +1,30 @@
+{
+  "name": "imageshrinker",
+  "productName": "ImageShrink",
+  "version": "1.0.0",
+  "description": "App for shrinking images and changing image quality",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron .",
+    "package-win": "electron-packager .  --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ImageShrink\"",
+    "create-installer-win": "node installers/windows/createinstaller.js"
+  },
+  "author": "Rahman Tavakoli",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "electron": "^10.1.5",
+    "electron-packager": "^15.1.0",
+    "electron-winstaller": "^4.0.1",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.7",
+    "electron-log": "^4.3.0",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "slash": "^3.0.0"
+  }
+}
